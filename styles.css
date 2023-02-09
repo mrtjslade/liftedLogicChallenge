@@ -1,0 +1,45 @@
+:root {
+  /*Headings, Footer, Icons, Logo, etc... */
+  --blue: #001D5D;
+  /*All Caps Heading, Button Text. Map Items */
+  --green: #42A418;
+  /*Button Background*/
+  --palegreen: #D9F0D0;
+  /*Shadow base color*/
+  --black: #000000;
+  /*White is used in the design */
+  --white: #FFFFFF;
+  /*Body Text, Form Fields*/
+  --gray: #777777;
+  /*Testimonials Background*/
+  --lightgray: #F6F6F6;
+  /*Slider Buttons*/
+  --pale: #B8BFCF;
+  /*Testimonials Slider*/
+  --shadow: #FFFFFF;
+}
+
+.navbar {
+overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navicon {
+  filter: invert(8%) sepia(70%) saturate(3395%) hue-rotate(215deg) brightness(99%) contrast(105%);
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
