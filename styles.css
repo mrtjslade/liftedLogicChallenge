@@ -19,22 +19,50 @@
   --shadow: #FFFFFF;
 }
 
-.navbar {
-overflow: hidden;
-  text-align: center;
-  width: 100%;
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
 }
 
-.navbar a {
-  float: left;
-  padding: 12px;
+nav {
+  display: flex;
+  width: 100%;
+  /* border: 1px solid blue; */
+  padding-top: 10px;
+}
+
+nav a {
   color: var(--blue);
   text-decoration: none;
-  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
 }
 
-.navicon {
+.container {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  /* height: 500px; */
+  /* border: 1px solid red; */
+  
+}
+
+.image {
+  width: 18px;
+  height: 18px;
+  margin-right: 20px;
   filter: invert(8%) sepia(70%) saturate(3395%) hue-rotate(215deg) brightness(99%) contrast(105%);
+}
+
+.text {
+  line-height: 1.5;
+  font-size: 18px;
+}     
+
+.navicon {
+  
 }
 
 @media screen and (max-width: 500px) {
