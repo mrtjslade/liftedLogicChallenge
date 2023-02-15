@@ -22,8 +22,65 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
+  font-style: normal;
 }
 
+/* WYSIWYG Text Styles */
+h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 72px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.large-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.regular-body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.small-body {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Navigation styles */
 nav {
   display: flex;
   width: 100%;
@@ -46,14 +103,6 @@ nav a {
   justify-content: center;
   /* height: 500px; */
   /* border: 1px solid red; */
-  
-}
-
-.image {
-  width: 18px;
-  height: 18px;
-  margin-right: 20px;
-  filter: invert(8%) sepia(70%) saturate(3395%) hue-rotate(215deg) brightness(99%) contrast(105%);
 }
 
 .text {
@@ -62,12 +111,182 @@ nav a {
 }     
 
 .navicon {
-  
+  width: 18px;
+  height: 18px;
+  margin-right: 20px;
+  filter: invert(8%) sepia(70%) saturate(3395%) hue-rotate(215deg) brightness(99%) contrast(105%);
 }
 
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
+p {
+  color: var(--gray);
+}
+
+/* Hero styles */
+.herocontainer {
+  display: flex;
+  height: 500px;
+  align-items: center;
+}
+
+.left-column {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+
+.left-column img {
+  height: auto;
+  width: 100%;
+}
+
+.right-column {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+}
+
+button {
+  background: var(--palegreen);
+  color: var(--green);
+  border: 0px;
+  border-radius: 2px; 
+  /* display: flex; */
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 168px;
+  height: 48px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px; /* adjust to your desired height */
+  overflow: hidden;
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.hero-content a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* New Releases Section */
+.centered-container {
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-container h3, .centered-container p {
+  text-align: center;
+}
+
+/* Card Section */
+.card-section {
+  height: 595px;
+  border: solid 1px blue;
+}
+
+.card-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 570px;
+  border: 1px solid red;
+}
+
+.card-image {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  height: 189px;
+  width: 188px;
+}
+
+.card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50%;
+}
+
+.card-text h4:first-child {
+  margin-top: 0;
+}
+
+.card-text h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-arrows {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.arrow-image {
+  width: 50px;
+  height: 50px;
+}
+
+ /* Media query for About Section*/
+ @media (max-width: 700px) {
+  .herocontainer {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .left-column {
+    height: auto; /* set the height of the left column to be auto */
+    width: 100%; /* set the width of the left column to be 100% */
+  }
+  
+  .right-column {
+    width: 100%; /* set the width of the right column to be 100% */
+    height: auto; /* set the height of the right column to be auto */
   }
 }
+
