@@ -19,13 +19,22 @@
   --shadow: #FFFFFF;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
+*{
   margin: 0;
-  font-style: normal;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* WYSIWYG Text Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  color: var(--blue);
+}
+
+
+
+/* General Styling */
+/* #region */
 h1 {
   font-weight: 700;
   font-size: 64px;
@@ -81,13 +90,47 @@ h6 {
   line-height: 20px;
 }
 
+p {
+  color: var(--gray);
+}
+
+button {
+  background-color: var(--palegreen);
+  color: var(--green);
+  width: 168px;
+  height: 48px; /* Button height differs in Figma design */ 
+  border: none;
+  border-radius: 2px;
+
+  font-weight: 500px;
+  font-size: 16px;
+  line-height: 24px;
+
+  padding: 10px 0;
+  margin: 10px 0;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+/* #endregion */
+
 /* Navigation styles */
+/* #region */
 nav {
+  position: sticky;
+  top: 0;
+  left: 0;
   display: flex;
   width: 100%;
-  /* border: 1px solid blue; */
-  padding-top: 10px;
+  height: 64px;
+  z-index: 1;
+  background-color: var(--white);
 }
+
 
 nav a {
   color: var(--blue);
@@ -95,124 +138,134 @@ nav a {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
+  line-height: 26px;
 }
 
-.container {
+.nav-item {
   display: flex;
   width: 20%;
   align-items: center;
   justify-content: center;
-  /* height: 500px; */
-  /* border: 1px solid red; */
+  
 }
-
-.text {
-  line-height: 1.5;
-  font-size: 18px;
-}     
 
 .navicon {
   width: 18px;
   height: 18px;
-  margin-right: 20px;
+  margin-right: 12px;
   filter: invert(8%) sepia(70%) saturate(3395%) hue-rotate(215deg) brightness(99%) contrast(105%);
 }
 
-p {
-  color: var(--gray);
-}
 
 
-
-
+/* #endregion */
 
 /* Hero styles */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 500px; /* adjust to your desired height */
-  overflow: hidden;
-}
+/* #region */
 
-.hero img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 500px; /* adjust to your desired height */
+    overflow: hidden;
+    color: var(--white);
+  }
 
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
-}
+  .hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-.hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  color: var(--white);
-}
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
 
-.hero-content p {
-  margin-bottom: 20px;
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--white);
+  }
 
-}
+  .hero-content p {
+    margin-bottom: 20px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    /* letter-spacing: 0em; */
+    text-align: left;
+  }
 
-/* .hero-content a {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #000;
-  text-decoration: none;
-  border-radius: 5px;
-} */
+  .hero-content a {
+    display: inline-block;
+    /* padding: 10px 20px; */
+    color: inherit;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 24px;
+  }
+
+  .hero-content a:visited {
+    color: var(--white);
+  }
+
+  .video-container {
+    display: flex; 
+    align-items: center;
+  }
+
+  .video-svg {
+    position: relative;
+  }
+
+  
+/* #endregion */
 
 /* Artist sections */
-.artistcontainer {
+/* #region */
+.artist-container {
   display: flex;
-  flex-wrap: wrap;
+  width: 80%;
   justify-content: center;
-  align-items: stretch;
-  column-gap: 32px;
-  margin: 128px 152px 128px 50px;
+  margin: 128px auto;
 }
 
-.image-column {
-  flex: 1;
-  flex-basis: 50%;
-  margin: 10px;
+.column {
+  width: 50%;
+}
+
+.artist {
   height: 100%;
-}
-
-.artistcontainer img {
   max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  
 }
-
-.content-column {
-  flex: 1;
-  flex-basis: 50%;
+.content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-left: 20px;
 }
 
-.content-column h3 {
+.button {
   align-self: flex-start;
 }
 
+
+  /* #endregion */
+
 /* New Releases Section */
+/* #region */
 .centered-container {
   height: 220px;
   display: flex;
@@ -229,8 +282,11 @@ p {
 .centered-container p {
   margin: 0 350px;
 }
+/* #endregion */
 
 /* Card Section */
+/* #region */
+
 .card-section {
   height: 595px;
   border: solid 1px blue;
@@ -285,46 +341,26 @@ p {
   width: 50px;
   height: 50px;
 }
+/* #endregion */
 
 
-
-/* Media query for screens smaller than 576px */
-@media (max-width: 575.98px) {
-
-  /* Styles for screens smaller than 576px */
-  .centered-container p {
-    margin: 0 50px;
+@media screen and (max-width: 767px) {
+  .artist-container {
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
   }
 }
 
-/* Media query for screens between 576px and 767px */
-@media (min-width: 576px) and (max-width: 767.98px) {
-
-  /* Styles for screens between 576px and 767px */
-  .centered-container p {
-    margin: 0 50px;
+@media (max-width: 480px) {
+  .text {
+    font-size: 16px;
   }
 }
 
-/* Media query for screens between 768px and 991px */
-@media (min-width: 768px) and (max-width: 991.98px) {
-
-  /* Styles for screens between 768px and 991px */
-  .centered-container p {
-    margin: 0 50px;
+@media screen and (max-width: 1300px){
+  .artist-container {
+    margin: 128px 50px;
   }
-}
-
-/* Media query for screens between 992px and 1199px */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-
-  /* Styles for screens between 992px and 1199px */
-
-}
-
-/* Media query for screens larger than or equal to 1200px */
-@media (min-width: 1200px) {
-
-  /* Styles for screens larger than or equal to 1200px */
-
 }
