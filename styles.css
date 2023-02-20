@@ -30,6 +30,7 @@ h1 {
   font-weight: 700;
   font-size: 64px;
   line-height: 72px;
+  color: var(--blue);
 }
 
 h2 {
@@ -121,44 +122,11 @@ p {
   color: var(--gray);
 }
 
+
+
+
+
 /* Hero styles */
-.herocontainer {
-  display: flex;
-  height: 500px;
-  align-items: center;
-}
-
-.left-column {
-  width: 50%;
-  height: 100%;
-  text-align: center;
-}
-
-.left-column img {
-  height: auto;
-  width: 100%;
-}
-
-.right-column {
-  width: 50%;
-  height: 100%;
-  padding: 10px;
-}
-
-button {
-  background: var(--palegreen);
-  color: var(--green);
-  border: 0px;
-  border-radius: 2px; 
-  /* display: flex; */
-  /* flex-direction: row; */
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  width: 168px;
-  height: 48px;
-}
-
 .hero {
   position: relative;
   width: 100%;
@@ -180,27 +148,68 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
+  text-align: left;
 }
 
 .hero-content h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  color: var(--white);
 }
 
 .hero-content p {
-  font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+
 }
 
-.hero-content a {
+/* .hero-content a {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #fff;
   color: #000;
   text-decoration: none;
   border-radius: 5px;
+} */
+
+/* Artist sections */
+.artistcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  column-gap: 32px;
+  margin: 128px 152px 128px 50px;
+}
+
+.image-column {
+  flex: 1;
+  flex-basis: 50%;
+  margin: 10px;
+  height: 100%;
+}
+
+.artistcontainer img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.content-column {
+  flex: 1;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-column h3 {
+  align-self: flex-start;
 }
 
 /* New Releases Section */
@@ -210,10 +219,15 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .centered-container h3, .centered-container p {
   text-align: center;
+}
+
+.centered-container p {
+  margin: 0 350px;
 }
 
 /* Card Section */
@@ -272,21 +286,45 @@ button {
   height: 50px;
 }
 
- /* Media query for About Section*/
- @media (max-width: 700px) {
-  .herocontainer {
-    flex-direction: column;
-    height: auto;
-  }
-  
-  .left-column {
-    height: auto; /* set the height of the left column to be auto */
-    width: 100%; /* set the width of the left column to be 100% */
-  }
-  
-  .right-column {
-    width: 100%; /* set the width of the right column to be 100% */
-    height: auto; /* set the height of the right column to be auto */
+
+
+/* Media query for screens smaller than 576px */
+@media (max-width: 575.98px) {
+
+  /* Styles for screens smaller than 576px */
+  .centered-container p {
+    margin: 0 50px;
   }
 }
 
+/* Media query for screens between 576px and 767px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  /* Styles for screens between 576px and 767px */
+  .centered-container p {
+    margin: 0 50px;
+  }
+}
+
+/* Media query for screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  /* Styles for screens between 768px and 991px */
+  .centered-container p {
+    margin: 0 50px;
+  }
+}
+
+/* Media query for screens between 992px and 1199px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  /* Styles for screens between 992px and 1199px */
+
+}
+
+/* Media query for screens larger than or equal to 1200px */
+@media (min-width: 1200px) {
+
+  /* Styles for screens larger than or equal to 1200px */
+
+}
