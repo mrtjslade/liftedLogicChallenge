@@ -16,75 +16,96 @@
 </head>
 
 <body>
-    <!--Navigation-->
     <nav>
-        <div class="container">
-            <a href="#home"><img src="assets/Logos/Logo-Blue.svg"/></a>
-            </div>
-        </div>
+      <div class="nav-item hide" style="width: 30%;">
+          <a href="#home"><img src="assets/Logos/Logo-Blue.svg"/></a>
+          </div>
+      </div>
 
-        <div class="container">
-            <a href="#home"><img src="assets\icons\nav\home.svg" class="navicon" />
-            <div class="text">
-            Home</a>
-            </div>
-        </div>
+      <div class="nav-item">
+          <a href="#home"><img src="assets\icons\nav\home.svg" class="navicon" />
+          <div class="text">
+          Home</a>
+          </div>
+      </div>
 
-        <div class="container">
-            <a href="#home"><img src="assets\icons\nav\record.svg" class="navicon" />
-            <div class="text">
-            Records</a>
-            </div>
-        </div>
+      <div class="nav-item">
+          <a href="#home"><img src="assets\icons\nav\record.svg" class="navicon" />
+          <div class="text">
+          Records</a>
+          </div>
+      </div>
 
-        <div class="container">
-            <a href="#home"><img src="assets\icons\nav\musicnote.svg" class="navicon" />
-            <div class="text">
-            Music</a>
-            </div>
-        </div>
+      <div class="nav-item">
+          <a href="#home"><img src="assets\icons\nav\musicnote.svg" class="navicon" />
+          <div class="text">
+          Music</a>
+          </div>
+      </div>
 
-        <div class="container">
-            <a href="#home"><img src="assets\icons\nav\people.svg" class="navicon" />
-            <div class="text">
-            Artists</a>
-            </div>
-        </div>
+      <div class="nav-item">
+          <a href="#home"><img src="assets\icons\nav\people.svg" class="navicon" />
+          <div class="text">
+          Artists</a>
+          </div>
+      </div>
 
-        <div class="container">
-            <a href="#home"><img src="assets\icons\nav\calendar.svg" class="navicon" />
-            <div class="text">
-            Concerts</a>
-            </div>
-        </div>
+      <div class="nav-item">
+          <a href="#home"><img src="assets\icons\nav\calendar.svg" class="navicon" />
+          <div class="text">
+          Concerts</a>
+          </div>
+      </div>
 
-        <div class="container">
-            <button type="button">Click Me!</button>
-            </div>
-        </div>
+      <div class="nav-item hide" style="width: 30%;">  
+            <button style="height:40px;" onclick="window.location.href='#';">Sign Up</button>
+          </div>
+      </div>
     </nav>
 
     <!--Hero-->
     <div class="hero">
-        <img src="assets/Images/dj.jpg" alt="description of the image" width="100%">
+        <img src="assets/Images/dj.jpg" alt="description of the image">
         <div class="hero-content">
           <h1>A.M. Paradox</h1>
           <p>Christopher Brent Wood, better known by his stage name Brent Faiyaz, is
-            an American singer and record producer. He released his debut project, an extended play entitled A.M. Paradox, in 2016.</p>
+            an American singer and record producer. He released his debut project, an extended play entitled A.M. Paradox, in 2016.
+          </p>
+            
+          <div class="video-container">
+            <div class="video-svg">
+              <svg width="60" height="60" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="#">
+                  <circle cx="10" cy="10" r="9" fill="white" />
+                </a>
+              </svg>
+              <svg style="position: absolute; top: 20px; left: 20px;" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="#">
+                  <path d="M20 10L5 18.6603L5 1.33974L20 10Z" fill="#001D5D"/>
+                </a>
+              </svg>
+            </div>
+            <a href="#">Watch Video</a>
+          </div>
         </div>
-
     </div>
     
     <!-- Artist Section -->
-      <div class="artistcontainer">
-        <div class="image-column">
-          <img src="assets/Images/artist.webp" alt="your-image-description">
+      
+
+      <div class="artist-container">
+        <div class="column">
+          <img src="assets/Images/artist.webp" alt="image" class="artist" />
         </div>
-        <div class="content-column">
-          <h3>Brent Faiyaz, So Far Gone</h3>
-          <p>Faiyaz began uploading his music onto SoundCloud in 2014 and moved from his hometown Columbia, Maryland to Charlotte, North Carolina before ultimately settling in Los Angeles, California to further his music career.  On January 19, 2015, he released his debut single "Allure". On June 1, 2016, Faiyaz released "Invite Me", the lead single from his upcoming debut EP. On September 19, 2016, his 21st birthday, the EP entitled A.M. Paradox was released and received with positive reviews from music critics.  On January 26, 2017, Sonder released their debut EP Into.</p>
+        <div class="column">
+          <div class="content">
+            <h3>Brent Faiyaz, So Far Gone</h3>
+            <p class="regular-body">Faiyaz began uploading his music onto SoundCloud in 2014 and moved from his hometown Columbia, Maryland to Charlotte, North Carolina before ultimately settling in Los Angeles, California to further his music career.  On January 19, 2015, he released his debut single "Allure". On June 1, 2016, Faiyaz released "Invite Me", the lead single from his upcoming debut EP. On September 19, 2016, his 21st birthday, the EP entitled A.M. Paradox was released and received with positive reviews from music critics.  On January 26, 2017, Sonder released their debut EP Into.</p>
+            <button style="padding: 0; margin: 0" onclick="window.location.href='#';">Learn More</button>
+          </div>
         </div>
-      </div>      
+      </div>
+      
     
     <!--New Releases-->
     <div class="centered-container">
@@ -112,11 +133,6 @@
     <!--Contact-->
 
     <!--Footer-->
-
-
-
-
-
 
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
