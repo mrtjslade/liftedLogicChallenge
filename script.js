@@ -38,3 +38,6 @@ function shiftRight() {
 // Add event listeners for arrow buttons
 document.querySelector('.arrow-left').addEventListener('click', shiftLeft);
 document.querySelector('.arrow-right').addEventListener('click', shiftRight);
+
+
+

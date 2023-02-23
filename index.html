@@ -197,13 +197,48 @@
   </div>
 
   <!--Google Maps-->
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775.3031772254387!2d-94.66821632982041!3d38.98764150787153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0eb66d3f79dd9%3A0xa7a51cba69767a7e!2sLifted%20Logic!5e0!3m2!1sen!2sus!4v1677109114335!5m2!1sen!2sus&amp;style='map.json'" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://snazzymaps.com/embed/465911" width="100%" height="600px" style="border:none; margin-top: 50px"></iframe>
 
 
-
-
-  
-  <!--Contact-->
+  <!--Contact Form-->
+  <div class="form-container">
+   <div class="form-column">
+    <h3>Get In Touch</h3>
+    <p class="large-body">New albums every single month, check out the newest & best from Snyder Recording artist, now available on Apple Music & Spotify.</p>
+    <form action="#" method="POST" onsubmit="return validateForm()">
+      <div class="form-row">
+        <label for="first-name">First Name:</label>
+        <label for="last-name">Last Name:</label>
+      </div>
+      <div class="form-row">
+        <input type="text" id="first-name" name="first-name" required>
+        <input type="text" id="last-name" name="last-name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email Address:</label>
+        <label for="reason">Reason for Contacting:</label>
+      </div>
+      <div class="form-row">
+        <input type="email" id="email" name="email" required>
+        <select id="reason" name="reason" required>
+          <option value="">Select a reason</option>
+          <option value="general">General inquiry</option>
+          <option value="support">Technical support</option>
+          <option value="feedback">Feedback or suggestion</option>
+        </select>
+      </div>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <!-- <input type="submit" value="Submit"> -->
+      <button type="submit" style="padding: 0; margin: 0; margin-bottom: 4px" onclick="submitForm()">Learn More</button>
+    </form>
+    <p id="message" style="display: none">Message received!</p>
+   </div>
+   
+   <div class="form-image"> 
+    <img src="assets/Images/singing.jpg" width="100%" height="100%">
+   </div>
+  </div>
 
   <!--Footer-->
   <div style="background-color: red; height: 200px"></div>
@@ -213,6 +248,7 @@
         <![endif]-->
 
   <script src="script.js" async defer></script>
+  <script src="form-validation.js" async defer></script>
 </body>
 
 </html>
