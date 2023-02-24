@@ -202,45 +202,81 @@
 
   <!--Contact Form-->
   <div class="form-container">
-   <div class="form-column">
-    <h3>Get In Touch</h3>
-    <p class="large-body">New albums every single month, check out the newest & best from Snyder Recording artist, now available on Apple Music & Spotify.</p>
-    <form action="#" method="POST" onsubmit="return validateForm()">
-      <div class="form-row">
-        <label for="first-name">First Name:</label>
-        <label for="last-name">Last Name:</label>
-      </div>
-      <div class="form-row">
-        <input type="text" id="first-name" name="first-name" required>
-        <input type="text" id="last-name" name="last-name" required>
-      </div>
-      <div class="form-row">
-        <label for="email">Email Address:</label>
-        <label for="reason">Reason for Contacting:</label>
-      </div>
-      <div class="form-row">
-        <input type="email" id="email" name="email" required>
-        <select id="reason" name="reason" required>
-          <option value="">Select a reason</option>
-          <option value="general">General inquiry</option>
-          <option value="support">Technical support</option>
-          <option value="feedback">Feedback or suggestion</option>
-        </select>
-      </div>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-      <!-- <input type="submit" value="Submit"> -->
-      <button type="submit" style="padding: 0; margin: 0; margin-bottom: 4px" onclick="submitForm()">Learn More</button>
-    </form>
-    <p id="message" style="display: none">Message received!</p>
-   </div>
-   
-   <div class="form-image"> 
-    <img src="assets/Images/singing.jpg" width="100%" height="100%">
-   </div>
+    <div class="form-column">
+      <h3>Get In Touch</h3>
+      <p class="large-body">New albums every single month, check out the newest & best from Snyder Recording artist, now available on Apple Music & Spotify.</p>
+      <form id="contact-form" action="#">
+        <div class="form-row">
+          <label for="first-name">First Name</label>
+          <label for="last-name">Last Name</label>
+        </div>
+        <div class="form-row">
+          <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+          <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+        </div>
+        <div class="form-row">
+          <label  for="email">Email Address</label>
+          <label for="reason">Reason for Contacting</label>
+        </div>
+        <div class="form-row">
+          <input type="email" id="email" name="email" placeholder="Email Address" required>
+          <select id="reason" name="reason" required>
+            <option value="">Select One</option>
+            <option value="general">General Inquiry</option>
+            <option value="support">Technical Support</option>
+            <option value="feedback">Feedback or Suggestion</option>
+            <option value="feedback">Other</option>
+          </select>
+        </div>
+        <label  for="message">Message (Optional)</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit" style="padding: 0; margin: 0; margin-bottom: 4px">Learn More</button>
+        <p id="message-received" style="display: none"></p>
+      </form>
+    </div>
+  
+    <div class="form-image"> 
+      <img src="assets/Images/singing.jpg" width="100%" height="100%">
+    </div>
   </div>
 
   <!--Footer-->
+  
+    <div class="footer-container">
+      <div class="footer-column">
+        <img src="something.png">
+        <p>8521 W Fairfax Rd
+          Los Angeles, CA</p>
+        <p>990210
+          (909) 505 4302</p>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Subscribe</h3>
+        <p class="small-body">Subscribe to our newsletter to get the latest news and updates.</p>
+        <form action="#">
+          <input type="email" id="email" name="email" placeholder="Email Address" required>
+          <button type="submit" style="padding: 0; margin: 0; margin-bottom: 4px">Subscribe</button>
+        </form>
+      </div>
+    </div
   <div style="background-color: red; height: 200px"></div>
 
   <!--[if lt IE 7]>

@@ -247,10 +247,9 @@ nav a {
 /* #region */
 .artist-container {
   display: flex;
-  /* align-items: flex-start; */
+  justify-content: center;
   width: 80%;
   height: 100%;
-  justify-content: center;
   margin: 128px auto 128px auto;
 }
 
@@ -384,19 +383,25 @@ nav a {
 /* #region */
 .form-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
   flex-direction: row;
-  /* margin: 0 50px; */
   width: 100%;
   height: 780px;
 }
 
 .form-column {
+  display: flex;
+  /* align-items: flex-start; */
+  flex-direction: column;
+  justify-content: space-between;
   width: 60%;
-  margin: 50px
-  
+  padding: 50px;
 }
+
+.form-column p {
+  width: 60%;
+}
+
 
 .form-image {
   height:780px;
@@ -412,7 +417,6 @@ nav a {
 label {
   display: block;
   margin-bottom: 10px;
-  font-weight: bold;
 }
 
 input[type=text],
@@ -421,21 +425,42 @@ select,
 textarea {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 14px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  /* border: 1px solid var(--blue); */
+  /* border-radius: 4px; */
+  /* box-sizing: border-box; */
   margin-bottom: 10px;
 }
 
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("assets/Icons/basic/chevrondown.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: right 8px center;
+  padding-right: 24px;
+  var(--blue);
+}
+
+select option {
+  color: var(--blue);
+}
+
 textarea {
-  height: 200px;
+  height: 150px;
+  min-height: 100px;
+  max-height: 300px;
+  min-width: 100%;
+  max-width: 100%;
 }
 
 .form-row {
   display: flex;
   justify-content: space-between;
+  margin: 10px 0;
 }
 
 .form-row input[type=text],
@@ -450,6 +475,32 @@ textarea {
 .form-row label {
   width: 48%;
 }
+
+.contact-form {
+  color: var(--gray);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+input, label, select, textarea, option {
+  color: var(--gray);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--blue);
+  border: none;
+  border-radius: 2px;
+  color: var(--blue);
+}
+
+#message-received {
+  margin-top: 10px;
+  font-size: 24px;
+  font-style: italic;
+  color: var(--blue);
+}
+
 
 /* #endregion */
 
@@ -500,6 +551,30 @@ textarea {
   /* New Releases section */
   .release-container p {
     width: 80%;
+  }
+
+  .form-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .form-column {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .form-column p {
+    width: 100%;
+  }
+
+  .form-column button {
+    text-align: center;
+  }
+
+  .form-image {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -564,9 +639,4 @@ textarea {
     line-height: 3vw;
     margin: 10px 0;
   }
-
-  .card.active {
-    /* Need to remove */
-  }
-
 }
