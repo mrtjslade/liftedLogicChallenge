@@ -12,8 +12,8 @@ Icons with Text: https://codepen.io/tjslade/pen/abjgGNX<br>
 
 # Validation of Code
 All files were validated to check for errors.  
-HTML Validation: https://validator.w3.org/
-CSS Validation: https://jigsaw.w3.org/css-validator/
+HTML Validation: https://validator.w3.org/<br>
+CSS Validation: https://jigsaw.w3.org/css-validator/<br>
 JavaScript Validation: https://esprima.org/demo/validate.html
 
 Thanks for checking out my project!
