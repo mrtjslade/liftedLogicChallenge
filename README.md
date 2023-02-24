@@ -1,5 +1,5 @@
 # liftedLogicChallenge
- Implement the front end for Synder Recordings based on Figma design
+ Challenge: Implement the front end for Synder Recordings based on Figma design
  
  Find the live site at: https://imreadytostartthebestwebdeveloperjobinkc.com/
  
